@@ -958,3 +958,19 @@ main aside,
 .modal-close:hover {
   color: #bbb;
 }
+/* ================= Responsive: mover noticia principal arriba ================= */
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column; /* apila verticalmente */
+  }
+
+  .article-section {
+    order: 1; /* noticia principal primero */
+  }
+
+  aside {
+    order: 2; /* sidebar después */
+    margin-top: 20px;
+  }
+}
