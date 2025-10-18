@@ -6,6 +6,7 @@ const supabaseUrl = 'https://mjcmbyarnybfqveztupm.supabase.co';
 const supabaseKey =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qY21ieWFybnliZnF2ZXp0dXBtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAwNjkyNTAsImV4cCI6MjA1NTY0NTI1MH0.xpC9mbG0vDf7SPkrbhx7bYZQ3M87agkkZSixAMrrqaA';
 const supabase = createClient(supabaseUrl, supabaseKey);
+const searchInput = document.getElementById('search-input');
 
 // estado
 let news = [];
@@ -35,6 +36,10 @@ async function fetchNews() {
 }
 
 // 🔎 Búsqueda de noticias
+searchInput.addEventListener('input', async (e) => {
+  const query = e.target.value;
+  await searchNews(query); // llama a la función que ya tenés
+});
 async function searchNews(query) {
   try {
     if (!query.trim()) {
