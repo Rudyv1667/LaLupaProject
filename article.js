@@ -1,5 +1,5 @@
 // ==================== CONFIGURACIÓN ====================
-const BASE_URL = 'http://localhost:3000'; // Aquí va tu servidor Node
+const BASE_URL = 'https://la-lupa-portal-de-noticias.onrender.com'; // Aquí va tu servidor Node
 const params = new URLSearchParams(window.location.search);
 const newsId = Number(params.get('id'));
 if (!newsId) console.error('No se pasó un ID válido en la URL');
