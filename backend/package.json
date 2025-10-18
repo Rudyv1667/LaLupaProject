@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "type": "module",
   "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "description": "Panel de administración de La Lupa con Electron y Supabase",
+
   "scripts": {
     "dev": "node server.js",
     "start": "electron .",
-    "package-win": "electron-packager . AdminPanel --platform=win32 --arch=x64 --icon=assets/logo.ico --overwrite"
+    "build": "electron-builder"
   },
+
   "dependencies": {
     "@supabase/supabase-js": "^2.58.0",
     "cors": "^2.8.5",
@@ -16,11 +21,36 @@
     "imagekit": "^6.0.0",
     "multer": "^2.0.2"
   },
+
   "devDependencies": {
     "electron": "^38.3.0",
-    "electron-packager": "^17.1.0"
+    "electron-builder": "^25.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+
+  "build": {
+    "appId": "com.lalupa.adminpanel",
+    "productName": "AdminPanel",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*",
+      "!dist/**/*",
+      "!AdminPanel-*",
+      "!.gitignore"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/logo.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/logo.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/logo.png"
+    }
+  }
 }
