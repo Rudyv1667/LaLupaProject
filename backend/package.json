@@ -1,0 +1,26 @@
+{
+  "name": "admin-panel",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "electron .",
+    "package-win": "electron-packager . AdminPanel --platform=win32 --arch=x64 --icon=assets/logo.ico --overwrite"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "imagekit": "^6.0.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "electron": "^38.3.0",
+    "electron-packager": "^17.1.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

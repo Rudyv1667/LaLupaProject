@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>La Lupa - Portal de Noticias</title>
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- SwiperJS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+        <div class="logo-title">
+            <img src="images/logo.png" alt="La Lupa logo" class="logo">
+            <h1>LA LUPA</h1>
+        </div>
+        <div class="social-link">
+            <a href="https://x.com/gaston_mouesca?s=21" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="24" height="24" fill="white">
+                    <path d="M714.163 548.26L1160.89 0H1058.54L671.731 464.66 357.751 0H0l468.906 684.82L0 1227.02h102.346l407.385-482.19 333.258 482.19H1200L714.163 548.26zM559.889 673.954l-47.237-67.82L139.41 79.799h162.829l304.274 437.906 47.238 67.82 389.86 560.705H881.77L559.889 673.954z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="yellow-label">NOTICIAS</div>
+
+        <!-- Carrusel arriba, full width -->
+        <div id="news-carousel" class="carousel"></div>
+            <div class="small-articles" id="secondary-news"></div>
+
+            <!-- Contenedor grid principal: izquierda main news + botón, derecha sidebar -->
+            <div class="recientes-container">
+
+                <!-- Columna izquierda: noticias principales -->
+                <section class="main-news" aria-label="Noticias principales">
+                <!-- Contenedor principal de noticias cargadas con JS -->
+                <div id="featured-container"></div>
+
+                <!-- Botón para cargar más noticias debajo de las main news -->
+                <div class="load-more-container">
+                    <button id="load-more-btn">Ver más noticias</button>
+                </div>
+                </section>
+
+                <!-- Columna derecha: sidebar completo -->
+                <aside class="sidebar-right">
+                <!-- Buscador arriba -->
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar..." />
+                </div>
+
+                <!-- Artículos recientes -->
+                <section class="recent-posts" aria-label="Artículos recientes">
+                    <h3>RECIENTES</h3>
+                    <div id="news-cards" class="news-grid"></div>
+                </section>
+
+                <!-- Foto de la semana -->
+                <section class="photo-week" aria-label="Foto de la semana"></section>
+                </aside>
+            </div>
+        </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="sobre-nosotros">
+          <h2>LA LUPA</h2>
+          <p><strong>SOBRE NOSOTROS</strong><br />
+          La Lupa es un medio de comunicación independiente que busca acercar la actualidad a sus lectores con información verificada y una mirada crítica, clara y cercana.</p>
+        </div>
+        <div class="seguinos">
+          <h2>SEGUINOS</h2>
+          <div class="social-link">
+              <a href="https://x.com/gaston_mouesca?s=21" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="24" height="24" fill="white">
+                      <path d="M714.163 548.26L1160.89 0H1058.54L671.731 464.66 357.751 0H0l468.906 684.82L0 1227.02h102.346l407.385-482.19 333.258 482.19H1200L714.163 548.26zM559.889 673.954l-47.237-67.82L139.41 79.799h162.829l304.274 437.906 47.238 67.82 389.86 560.705H881.77L559.889 673.954z"/>
+                  </svg>
+              </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<!-- Swiper y Supabase con defer -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script type="module" src="app.js" defer></script>
+</body>
+</html>

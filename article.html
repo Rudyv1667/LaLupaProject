@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Lupa | Artículo</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <!-- SwiperJS CSS (opcional, para carruseles en el aside) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header>
+      <div class="logo-title">
+        <img src="images/logo.png" alt="La Lupa logo" class="logo">
+        <h1>LA LUPA</h1>
+      </div>
+      <a href="index.html" class="back-btn">← Volver</a>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <!-- Columna izquierda (artículo + comentarios) -->
+      <section class="article-section">
+        <div id="article-content">
+          <!-- Aquí se cargará la noticia dinámica con su sección de comentarios -->
+        </div>
+      </section>
+
+      <!-- Columna derecha (aside) -->
+      <aside>
+        <div class="search-box">
+          <input type="text" placeholder="Buscar..." />
+        </div>
+
+        <section id="recent-news" aria-label="Artículos recientes">
+          <h3>RECIENTES</h3>
+          <ul id="news-cards"></ul>
+        </section>
+
+        <!-- Foto de la semana -->
+        <section class="photo-week" aria-label="Foto de la semana"></section>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="sobre-nosotros">
+          <h2>LA LUPA</h2>
+          <p><strong>SOBRE NOSOTROS</strong><br />
+            La Lupa es un medio de comunicación independiente que busca acercar la actualidad a sus lectores con información verificada y una mirada crítica, clara y cercana.
+          </p>
+        </div>
+        <div class="seguinos">
+          <h2>SEGUINOS</h2>
+          <div class="social-link">
+            <a href="https://x.com/gaston_mouesca?s=21" target="_blank" aria-label="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="24" height="24" fill="white">
+                <path d="M714.163 548.26L1160.89 0H1058.54L671.731 464.66 357.751 0H0l468.906 684.82L0 1227.02h102.346l407.385-482.19 333.258 482.19H1200L714.163 548.26zM559.889 673.954l-47.237-67.82L139.41 79.799h162.829l304.274 437.906 47.238 67.82 389.86 560.705H881.77L559.889 673.954z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script principal -->
+  <script type="module" src="article.js"></script>
+</body>
+</html>
