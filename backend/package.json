@@ -1,56 +1,48 @@
 {
-  "name": "admin-panel",
+  "name": "la-lupa",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Portal de noticias con Electron + Express + Supabase",
   "main": "main.js",
-  "author": "",
-  "license": "ISC",
-  "description": "Panel de administración de La Lupa con Electron y Supabase",
-
   "scripts": {
-    "dev": "node server.js",
     "start": "electron .",
     "build": "electron-builder"
   },
-
-  "dependencies": {
-    "@supabase/supabase-js": "^2.58.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
-    "express": "^4.21.2",
-    "imagekit": "^6.0.0",
-    "multer": "^2.0.2"
-  },
-
-  "devDependencies": {
-    "electron": "^38.3.0",
-    "electron-builder": "^25.0.0"
-  },
-
   "build": {
-    "appId": "com.lalupa.adminpanel",
-    "productName": "AdminPanel",
+    "appId": "com.lalupa.app",
+    "productName": "La Lupa",
     "directories": {
-      "output": "dist"
+      "buildResources": "assets"
     },
     "files": [
-      "**/*",
-      "!node_modules/**/*",
-      "!dist/**/*",
-      "!AdminPanel-*",
-      "!.gitignore"
+      "main.js",
+      "server.js",
+      "public/**/*",
+      "package.json"
     ],
-    "win": {
-      "target": "nsis",
-      "icon": "assets/logo.ico"
-    },
+    "extraResources": [
+      {
+        "from": "public/",
+        "to": "public"
+      }
+    ],
     "mac": {
-      "target": "dmg",
-      "icon": "assets/logo.icns"
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
     },
     "linux": {
-      "target": "AppImage",
-      "icon": "assets/logo.png"
+      "target": "AppImage"
     }
+  },
+  "dependencies": {
+    "electron": "^31.0.0",
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "@supabase/supabase-js": "^2.45.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.0.0"
   }
 }
