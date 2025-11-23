@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         # Use npm ci for clean install; adjust if you need npm install
-        run: npm ci
+        run: npm install
         working-directory: backend
 
       - name: Build Electron app
