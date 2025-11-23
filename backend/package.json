@@ -1,6 +1,7 @@
 {
   "name": "la-lupa",
   "version": "1.0.0",
+  "author": "Rudy Villarroel",
   "description": "Portal de noticias con Electron + Express + Supabase",
   "main": "main.js",
   "scripts": {
