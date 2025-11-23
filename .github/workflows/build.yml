@@ -1,4 +1,5 @@
 name: Build Electron App
+author: Rudy Villarroel
 
 on:
   push:
