@@ -11,6 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-latest]
+
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -22,6 +23,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
 
       - name: Install dependencies
         run: npm install
