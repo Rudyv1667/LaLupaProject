@@ -1,5 +1,4 @@
 name: Build Electron App
-author: Rudy Villarroel
 
 on:
   push:
@@ -25,7 +24,6 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        # Use npm ci for clean install; adjust if you need npm install
         run: npm install
         working-directory: backend
 
