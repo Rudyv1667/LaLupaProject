@@ -1,3 +1,6 @@
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
