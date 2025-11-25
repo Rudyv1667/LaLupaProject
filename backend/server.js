@@ -1,6 +1,3 @@
-app.get('/ping', (req, res) => {
-  res.send('pong');
-});
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -12,6 +9,10 @@ import newsRoutes from './api/news.js';
 // ==================== CONFIGURACIÓN BASE ====================
 dotenv.config();
 const app = express();
+
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
 
 // Obtener rutas absolutas para evitar errores en Electron
 const __filename = fileURLToPath(import.meta.url);
