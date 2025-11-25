@@ -79,7 +79,7 @@ app.post('/api/comments', async (req, res) => {
 
 // ==================== RUTA PRINCIPAL ====================
 app.get('/', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'));
+  res.send('Backend activo');
 });
 
 // ==================== 404 MANEJO ====================
